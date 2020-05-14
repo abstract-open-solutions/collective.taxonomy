@@ -29,7 +29,7 @@ def _items_cachekey(fun, self):
                             interfaces.IOrderedSelectWidget)
 class TaxonomySelectWidget(OrderedSelectWidget):
 
-    @ram.cache(_items_cachekey)
+    #@ram.cache(_items_cachekey)
     def _get_items(self):
         return [
             self.getItem(term, count)

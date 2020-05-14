@@ -83,7 +83,7 @@ class Taxonomy(SimpleItem):
         return self.makeVocabulary(language)
 
     @property
-    @ram.cache(lambda method, self: (self.name, self.data._p_mtime))
+    #@ram.cache(lambda method, self: (self.name, self.data._p_mtime))
     def inverted_data(self):
         inv_data = {}
         for (language, elements) in self.data.items():
